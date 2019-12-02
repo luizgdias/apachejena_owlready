@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38"
+         xmlns="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38"/>
+
+<owl:ObjectProperty rdf:about="#wasDerivedFrom">
+  <rdfs:domain rdf:resource="#Entity"/>
+  <rdfs:range rdf:resource="#Entity"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wasGeneratedBy">
+  <rdfs:domain rdf:resource="#Entity"/>
+  <rdfs:range rdf:resource="#Activity"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#used">
+  <rdfs:domain rdf:resource="#Activity"/>
+  <rdfs:range rdf:resource="#Entity"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wasAttributedTo">
+  <rdfs:domain rdf:resource="#Entity"/>
+  <rdfs:range rdf:resource="#Agent"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wasAssociatedWith">
+  <rdfs:domain rdf:resource="#Activity"/>
+  <rdfs:range rdf:resource="#Agent"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasMetadata">
+  <rdfs:domain rdf:resource="#Entity"/>
+  <rdfs:range rdf:resource="#Metadata"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Entity">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Activity">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Agent">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Metadata">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OriginalFile">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OilWell">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Table">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Chart">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Image">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<Agent rdf:about="#pdf-extractor-v2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Agent>
+
+<Activity rdf:about="#extract-data">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasAssociatedWith rdf:resource="#pdf-extractor-v2"/>
+</Activity>
+
+<OriginalFile rdf:about="#file1.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasAttributedTo rdf:resource="#pdf-extractor-v2"/>
+</OriginalFile>
+
+<Table rdf:about="#table11.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file1.pdf"/>
+</Table>
+
+<OriginalFile rdf:about="#file2.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasAttributedTo rdf:resource="#pdf-extractor-v2"/>
+</OriginalFile>
+
+<Table rdf:about="#table21.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file2.pdf"/>
+</Table>
+
+<OriginalFile rdf:about="#file3.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasAttributedTo rdf:resource="#pdf-extractor-v2"/>
+</OriginalFile>
+
+<Table rdf:about="#table31.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file3.pdf"/>
+</Table>
+
+<OriginalFile rdf:about="#file4.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasAttributedTo rdf:resource="#pdf-extractor-v2"/>
+</OriginalFile>
+
+<Table rdf:about="#table41.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file4.pdf"/>
+</Table>
+
+<Image rdf:about="#img42.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file4.pdf"/>
+</Image>
+
+<OriginalFile rdf:about="#file5.pdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasAttributedTo rdf:resource="#pdf-extractor-v2"/>
+</OriginalFile>
+
+<Table rdf:about="#table51.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file5.pdf"/>
+</Table>
+
+<Image rdf:about="#img52.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file5.pdf"/>
+</Image>
+
+<Chart rdf:about="#chart53.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file5.pdf"/>
+</Chart>
+
+<Table rdf:about="#table54.jpg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <wasDerivedFrom rdf:resource="#file5.pdf"/>
+  <hasMetadata rdf:resource="#janeiro"/>
+  <hasMetadata rdf:resource="#rio"/>
+  <hasMetadata rdf:resource="#poco"/>
+  <hasMetadata rdf:resource="#petróleo"/>
+</Table>
+
+<Metadata rdf:about="#janeiro">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Metadata>
+
+<Metadata rdf:about="#rio">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Metadata>
+
+<Metadata rdf:about="#poco">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Metadata>
+
+<Metadata rdf:about="#petróleo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Metadata>
+
+
+</rdf:RDF>
