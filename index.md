@@ -39,3 +39,10 @@ Foram criados cinco métodos na classe main:
 - showClassesOrSub(model, uri, instance): exibe as informações de uma classe ou subclasse;
 - showMetadataInformation(model, uri, metadata): exibe informações de um metadado específico;
 - showOriginalFileInformation(model, uri, originalFile): exibe informações de um indivíduo do tipo originalFile;
+
+###Carregando a ontologia
+O primeiro passo para interagir com a ontologia é instanciar um modelo que carregará o vocabulário do domínio. Para isso Jena disponibiliza o tipo OntModel:
+
+OntModel <modelName> = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF);
+ 
+ O argumento recebido na instancia, fiz respeito a especificação do modelo, que leva em consideração o schema, os tipos de inferência e linguagens, maiores informações podem ser encontradas [aqui](https://jena.apache.org/documentation/javadoc/jena/org/apache/jena/ontology/OntModelSpec.html).
